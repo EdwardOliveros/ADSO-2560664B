@@ -1,0 +1,10 @@
+values = [1, 4]                               #haciendo uso de la palabra "values" se le asigna una lista con dos valores separados por coma.
+#x,y=19,30                                    #linea de codigo comentada, se crean dos variables a las cuales se les asignaran dos valores en la misma linea de codigo.
+#print(divmod(10,3))                          #linea de codigo comentada, usando la funcion "print" se le da como parametros la funcion "divmod" la cual dividira el argumento de la izquierda por el de la derecha dentro del parentesis y mostrara el resultado ademas del residuo de dicha division.
+try:                                          #Se crea un bloque de tipo "try" el cual contempla la funcion de validar y probar las operaciones contenidas en el.
+    q, r = divmod(*values)                    #creacion de dos variables en una misma linea de codigo a las cuales se les asignara el resultado de la division de cada valor entregado en la lista "values" y a traves del asterisco (*) se separara cada elemento encontrado en la lista permitiendo almacenar el resultado de la division y su modulo.
+    #print('q=',q)                            #linea de codigo comentada, uso de la funcion "print" para mostrar en pantalla una cadena de texto concatenada a una variable.
+    print(f'q={q}')                           #por medio de la funcion print se pretende mostrar una plantilla literal lo cual permite imprimir de forma literal lo que se encuentre dentro de las comillas despues de la letra "f" especificando que si existe una variable que se desee imprimir es necesario que esta se encuentre dentro de llaves
+    print(f'r={r}')                           #uso de una plantilla literal para mostrar una varible diferente a la anterior impresion
+except (ZeroDivisionError, TypeError) as e:   #una vez cerrado el bloque "try" se invoca la funcion "except" la cual recibe los tipos de errores a validar en una misma linea siendo representados como "e"
+    print(type(e), e)                         #uso de la funcion print para mostrar que tipo de dato es "e" y mostrando a "e" por si mismo.
