@@ -1,1 +1,10 @@
-
+values = (1, 0)                               #la palabra reservada en python denominada "values" sera inicializada y se le asignara uno o mas valores siendo capaz de alojarlos y permitir la creacion de una "tupla"
+#x,y=19,30                                    #linea de codigo comentada, se muestra un breve ejemplo de como asignar uno o mas valores a una o mas variables en una misma linea de codigo, se considera buena practica para conseguir ahorrar lineas de codigo. 
+#print(divmod(10,3))                          #linea de codigo comentada, invocada la funcion print recibiendo como parametro la funcion "divmod" que posee la capacidad de dividir el primer numero a la izquierda con el de la derecha y entregar el modulo o residuo de dicha division
+try:                                          #es ejecutada la funcion y bloque try para realizar pruebas de operaciones
+    q, r = divmod(*values)                    #dos variables son inicializadas identadas al bloque try y se les asignara el resultado de implementar la funcion divmod para la tupla "values" anteriormente creada, se hace uso del asterisco precedido de la palabra values para tomar todo lo que se encuentre dentro de la tupla
+    #print('q=',q)                            #linea de codigo comentada, identada al bloque try la presente linea imprime una cadena de texto donde busca mostrar graficamente como se iguala a su variable correspondiente.
+    print(f'q={q}')                           #por medio de la funcion print se pretende mostrar una plantilla literal lo cual permite imprimir de forma literal lo que se encuentre dentro de las comillas despues de la letra "f" especificando que si existe una variable que se desee imprimir es necesario que esta se encuentre dentro de llaves
+    print(f'r={r}')                           #uso de una plantilla literal para mostrar una varible diferente a la anterior impresion
+except (ZeroDivisionError, TypeError) as e:   #una vez cerrado el bloque "try" se invoca la funcion "except" la cual recibe los tipos de errores a validar en una misma linea siendo representados como "e"
+    print(type(e), e)                         #uso de la funcion print para mostrar que tipo de dato es "e" y mostrando a "e" por si mismo.
