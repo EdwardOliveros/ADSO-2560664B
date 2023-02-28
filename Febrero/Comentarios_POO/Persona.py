@@ -1,21 +1,20 @@
 class Persona:                              #Creacion de la clase "Persona" seguido de dos puntos para dar paso a la serie de instrucciones que se encuentren subsecuentes a ella donde se encontraran atributos y metodos.
     def __init__(self,nombre):              #definicion de la funcion "__init__" la cual recibe como parametros entre parentesis la palabra "self" la cual permite especificar la ubicacion de las propiedades contenidas en la clase definiendo que son propias de esta, ademas recibir como argumento "nombre".
         self.__nombre=nombre                #uso del argumento "self" para incorporar las propiedades de una clase seguido de un punto y dos guines bajos los cuales permiten administrar el acceso de privacidad para que este sea privado, encontramos entonces el atributo "__nombre" al cual se le asignara el argumento "nombre".
-        print('Activando constructor')
-
-    def getNombre(self):
-        return self.__nombre
-    
-    def setNombre(self, nombre):
-        self.__nombre=nombre
-
-    def metodo(self):
-        print('Soy un método')
-
-
-ob=Persona('Ana')
-print(ob.getNombre())
-ob.setNombre('Maria')
-print(ob.getNombre())
-#ob.metodo()
-#print(type(ob))
+        print('Activando constructor')      #Se implementa la función "print" con el objetivo de mostrar un mensaje en cadena de texto por pantalla, el mensaje es "Activando constructor" para indicar al desarrollador que la ejecucion para crear el constructor de la clase sea existosa.
+                                            #Nueva linea de codigo vacia para identificar los bloques con mayor facilidad al lector.
+    def getNombre(self):                    #inicialización de bloque para definición de función por medio de la palabra reservada "def" seguido del nombre junto con sus argumentos dentro del parentesis, encontramos el argumento "self para hacer refenrencia de que toda instrucción contenida en la presente función pertenecera a dicha función y por tanto atributo, encontramos entonces un metodo "get" el cual permite obtener todo valor almacenado en el atributo de "Nombre", resultando asi "getNombre".
+        return self.__nombre                #Se observa el uso de un retorno para devolver el valor almacenado en "self.__nombre" el cual sera tomado por el argumento posteriormente encontrado "nombre"
+                                            #Nueva linea de codigo vacia para identificar los bloques con mayor facilidad al lector.
+    def setNombre(self, nombre):            #inicialización de bloque para definición de función por medio de la palabra reservada "def" seguido del nombre "setNombre" el cual declara un metodo que tendra la propiedad de asignar lo recibido por una variable al atributo deseado, junto con sus argumentos dentro del parentesis, encontramos el argumento "self para hacer refenrencia de que toda instrucción contenida en la presente función pertenecera a dicha a asi misma, ademas del argumento "nombre" sera manipulado para la ejecución y finalmente dos puntos para iniciar las instrucciones que cumple esta función.
+        self.__nombre=nombre                #asignación del parametro "nombre" a "self.__nombre", es decir que todo lo que sea recibido por dicho argumento sera asignado al metodo atado al atributo.
+                                            #Nueva linea de codigo vacia para identificar los bloques con mayor facilidad al lector.
+    def metodo(self):                       #Inicialización de una nueva función tomando como nombre "metodo" y recibiendo como parametros la palabra "self" entre parentesis para definir que las instrucciones dispuestas seran propias del metodo, dos puntos para iniciar el bloque de la función.
+        print('Soy un método')              #Impresión por pantalla con la palabra reservada "print" de todo lo contenido dentro del parentesis, se mostrara un mensaje en cadena de texto "Soy un método".
+                                            #Nueva linea de codigo vacia para identificar los bloques con mayor facilidad al lector.
+ob=Persona('Ana')                           #Inicialización de variable la cual funcionara como objeto que pertencera a la clase principal "Persona", se le asignara la clase junto con el valor recibido entre los parentesis "Ana" y esto implicara que se obtendra el valor solicitado dentro de la clase.
+print(ob.getNombre())                       #Impresión del objeto "ob" junto con el metodo de obtención de valores ".getNombre" y parentesis vacios para atraer todo valor que fue almacenado en medio de la ejecución de la clase para ser arrojado en pantalla.
+ob.setNombre('Maria')                       #Manipulación del objeto "ob" junto con el metodo ".setNombre" para almacenar la cadena de texto "Maria".
+print(ob.getNombre())                       #impresión del objeto "ob" seguido del metodo ".getNombre" con parentesis vacios para mostrar los cambios realizados en el almacenamiento de un valor nuevo en el objeto el cual sera "Maria".
+#ob.metodo()                                #Linea de  codigo comentada, el objeto "ob" es usado para recibir las intrucciones de la función "metodo", podemos evidenciar que es la impresión de un mensaje en cadena de texto.
+#print(type(ob))                            #Linea de codigo comentada, Impresión del tipo de dato al que pertence el objeto "ob". 
