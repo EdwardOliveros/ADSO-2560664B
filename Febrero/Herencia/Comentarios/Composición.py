@@ -12,9 +12,9 @@ class Aprendiz:                           #creacion de clase de nombre "aprendiz
 
     def agregarCurso(self,nombreCursito): #creacion de metodo "agregar curso que recibe como parametros "nombreCursito"
         cursito=Curso(nombreCursito)      #se crea una variable que instancia la clase Curso con Aprendiz y reciba los valores de la clase externa
-        self.__cursos.append(cursito)     #
+        self.__cursos.append(cursito)     #se hace uso de un metodo .append para agregar a la lista los datos
 
-    def getCursos(self):
+    def getCursos(self):                  #
         return self.__cursos
     
 ap=Aprendiz('Sofia')
