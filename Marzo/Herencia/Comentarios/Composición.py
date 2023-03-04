@@ -14,12 +14,12 @@ class Aprendiz:                           #creacion de clase de nombre "aprendiz
         cursito=Curso(nombreCursito)      #se crea una variable que instancia la clase Curso con Aprendiz y reciba los valores de la clase externa
         self.__cursos.append(cursito)     #se hace uso de un metodo .append para agregar a la lista los datos
 
-    def getCursos(self):                  #
-        return self.__cursos
+    def getCursos(self):                  #se define un metodo get
+        return self.__cursos              #retorno de datos almacenados en "cursos"
     
-ap=Aprendiz('Sofia')
-ap.agregarCurso('Python Basico')
-ap.agregarCurso('Python Intermedio')
+ap=Aprendiz('Sofia')                      #se crea un objeto que almacenara en la clase "Aprendiz" la cadema de texto "Sofia"
+ap.agregarCurso('Python Basico')          #se hace uso del metodo "agregarCurso" para que el objeto reciba la cadena de texto "Python Basico"
+ap.agregarCurso('Python Intermedio')      #se hace uso del metodo "agregarCurso" para que el objeto reciba la cadena de texto "Python Intermedio"
 
-for c in ap.getCursos():
-    print(c.getTitulo())
+for c in ap.getCursos():                  #uso de un ciclo for para recorrer cada dato contenido en el metodo "getCursos"
+    print(c.getTitulo())                  #impresión de datos contenidos en el metodo "getTitulo"
