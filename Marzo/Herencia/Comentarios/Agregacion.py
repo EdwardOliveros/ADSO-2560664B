@@ -1,9 +1,9 @@
-class Aprendiz:
-    def __init__(self,nombre):
-        self.__nombre=nombre
-        self.__cursos=[]
+class Aprendiz:                             #creacion de la clase con nombre "Aprendiz"
+    def __init__(self,nombre):              #definicion de constructor con la palabra reservada "self" que hace referencia a que el contenido que tiene esta clase es propia de ella junto con el atributo nativo "nombre"
+        self.__nombre=nombre                #uso de la funcion "self" para resaltar que el acceso del atributo sera reservado.
+        self.__cursos=[]                    #asignacion de lista a elemento "curso" el cual se encontrara privado.
 
-    def agregarCurso(self,titulo):
+    def agregarCurso(self,titulo):          #
         self.__cursos.append(titulo)
 
     def getCursos(self):
