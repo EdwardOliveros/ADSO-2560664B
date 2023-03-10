@@ -11,9 +11,7 @@ class usuario:
         self.nomusuario=nomusuario
         self.contraseña=contraseña
         self.estado=estado
-        print("Usuario: ")
-        
-    
+         
     def mostrarusuario(self):
         print(f"Id: {self.id} Nombre: {self.nombre} Apellido: {self.apellido} Edad: {self.edad} Contacto: {self.contactnum} Rol: {self.rol} Usuario: {self.nomusuario} Contraseña: {self.contraseña} Estado: {self.estado}")
 
@@ -21,6 +19,7 @@ class usuario:
 obj_Instructor = usuario("", "", "", "", "", "", "", "", "")
 obj_Estudiante = usuario("", "", "", "", "", "", "", "", "")
 
+print("")
 
 ########################Clase Instructor########################
 
@@ -38,11 +37,10 @@ class Instructor(usuario):
     
 
 obj_Instructor = Instructor("123456789", "Luis", "Gomez", 32, "3104578167", "Instructor", "Luis_G", "123abc", "Activo", "1a2b3c", "Analista", "Docente")
-
 obj_Instructor.mostrarusuario()
-
 obj_Instructor.mostrarIns()
 
+print("")
 
 ########################Clase Estudiante########################
 
@@ -61,7 +59,7 @@ obj_Estudiante = Estudiante("110794806", "Edward", "Oliveros", 18, "3173964954",
 obj_Estudiante.mostrarusuario()
 obj_Estudiante.mostrarEst()
 
-
+print("")
 
 ########################    Matricula    ########################
 
@@ -73,12 +71,6 @@ class matricula():
         self.fecha=fecha
         self.estudiante = None
         print("Iniciando Matricula: ")
-
-    def muestramatricula(self):
-        print(self.id)
-        print(self.detalle)
-        print(self.requerimiento)
-        print(self.fecha)
 
         if self.estudiante==None:
             print("Matricular Estudiante")
@@ -99,50 +91,76 @@ obj_Matricula.mostrarMatr()
 
 obj_Matricula.matricular(obj_Estudiante)
 
-obj_Matricula.muestramatricula()
-
+print("")
 
 ########################   ASIGNATURAS   ########################
 
 class asignatura():
     def __init__(self, id, nombre, descripcion, instructor, cronograma):
+
         self.id=id
         self.nombre=nombre 
         self.descripcion=descripcion
         self.instructor=instructor
         self.cronograma=cronograma
-        self.instructor = None
-        print("Iniciando Asignatura:")
+        
 
-    def muestraasignatura(self):
-        print(self.id)
-        print(self.nombre)
-        print(self.descripcion)
-        print(self.instructor)
-        print(self.cronograma)
+        print("Iniciando Asignatura:")
 
         if self.instructor==None:
             print("Asignar Instructor")
         else:
             print(self.instructor)
 
-    def asignatura(self, instructor):
+    def agregainstructor(self, instructor):
         if isinstance(instructor, Instructor):
-            self.instructor=Instructor
+            self.instructor=instructor
         else:
             print("Agrege un Instructor: ")
+    
 
     def mostrarAsign(self):
-        print(f"id: {self.id} Nombre: {self.nombre} Descripcion: {self.descripcion} Instructor: {self.instructor}  Cronograma: {self.cronograma}")
+        print(f"id: {self.id} Nombre: {self.nombre} Descripcion: {self.descripcion} Instructor: {self.instructor} Cronograma: {self.cronograma}")
+    
+    
     
 obj_Asignatura = asignatura("2468A", "Matematicas", "Algebra Booleana", "Luis", "08-03-2023 al 08-05-2023")
 obj_Asignatura.mostrarAsign()
 
-obj_Asignatura.asignatura(obj_Instructor)
+print("")
 
-obj_Asignatura.muestraasignatura()   
+########################   CURSO   ########################
+class curso:
+    def __init__(self, id, descripcion, fecha, grado):
 
+        self.id=id
+        self.descripcion=descripcion
+        self.fecha=fecha
+        self.grado=grado
+
+        print("Curso:")
+
+    def mostrarcurso(self):
+        print(f"Id: {self.id} Descripcion: {self.descripcion} Fecha: {self.fecha} Grado: {self.grado}")
+    
+obj_Curso=curso("1", "Prueba", "01-01-2023", "10°")
+obj_Curso.mostrarcurso()
+
+print("")
+
+########################   TRANSACCION   ########################
+class transiccion:
+    def __init__(self, id, detalle, fecha):
+
+        self.id=id
+        self.detalle=detalle
+        self.fecha=fecha
         
 
+        print("Transaccion:")
 
+    def mostrartransaccion(self):
+        print(f"Id: {self.id} Detalle: {self.detalle} Fecha: {self.fecha}")
     
+obj_Transaccion=transiccion("1", "Matricula decimo grado", "01-01-2023")
+obj_Transaccion.mostrartransaccion()
